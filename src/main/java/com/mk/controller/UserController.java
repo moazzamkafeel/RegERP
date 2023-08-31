@@ -26,9 +26,8 @@ import com.mk.service.UserService;
 import com.mk.utils.ResponseHandler;
 
 
-//Conflict
+//Conflict  
 @RestController
-
 @RequestMapping("/")
 public class UserController {
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
