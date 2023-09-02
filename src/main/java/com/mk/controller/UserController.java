@@ -26,7 +26,7 @@ import com.mk.service.UserService;
 import com.mk.utils.ResponseHandler;
 
 
-//Conflict
+//moazzam origin
 @RestController
 
 @RequestMapping("/")
