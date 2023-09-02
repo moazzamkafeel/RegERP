@@ -31,9 +31,11 @@ import com.mk.utils.ResponseHandler;
 
 @RequestMapping("/")
 public class UserController {
+	
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 	@Autowired
 	UserService userService;
+	
 	@Autowired
 	OTPService otpService;
 
@@ -42,6 +44,7 @@ public class UserController {
 		UserDTO saveUser = userService.addUser(user);
 		return new ResponseEntity<UserDTO>(saveUser, HttpStatus.OK);
 	}
+	
 	@GetMapping("/all")
 	public ResponseEntity<List<User>> findAll() {
 	 List<User> user = userService.getAll();
@@ -50,7 +53,7 @@ public class UserController {
 	
 	@GetMapping("/allOTP")
 	public ResponseEntity<List<OTP>> findAllOTP() {
-List<OTP> otp = otpService.getAllOTP();
+		List<OTP> otp = otpService.getAllOTP();
 		return new ResponseEntity<>(otp, HttpStatus.OK);
 	}
 
