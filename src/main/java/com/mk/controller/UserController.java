@@ -44,7 +44,7 @@ public class UserController {
 		UserDTO saveUser = userService.addUser(user);
 		return new ResponseEntity<UserDTO>(saveUser, HttpStatus.OK);
 	}
-	
+	//All
 	@GetMapping("/all")
 	public ResponseEntity<List<User>> findAll() {
 	 List<User> user = userService.getAll();
@@ -56,7 +56,7 @@ public class UserController {
 		List<OTP> otp = otpService.getAllOTP();
 		return new ResponseEntity<>(otp, HttpStatus.OK);
 	}
-
+// Unmodified
 	@PostMapping(value ="/validate_otp", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Object> validateOtp(@RequestBody OTPValidateDTO otpValidateReqDto)
 			throws JsonProcessingException {
